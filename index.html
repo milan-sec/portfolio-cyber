@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Ton Prénom</title>
+
+  <!-- Lien vers ton fichier CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Police Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       BARRE DE NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav>
+    <div class="nav-logo">&gt; ton_pseudo</div>
+    <ul class="nav-links">
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#projects">projets</a></li>
+      <li><a href="#learning">formation</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       SECTION HERO (page d'accueil)
+  ═══════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-content">
+
+      <!-- Petit tag au dessus du titre -->
+      <div class="hero-tag">Étudiant Cybersécurité · Alternance 2025-2027</div>
+
+      <!-- Ton nom -->
+      <h1>Prénom <span class="accent">NOM</span></h1>
+
+      <!-- Sous-titre -->
+      <p class="hero-sub">
+        <span class="role">Pentest · Red Team · Cloud Security</span><br />
+        Étudiant Bac+5 Cyber &amp; Réseaux — en recherche d'alternance
+      </p>
+
+      <!-- Fausse fenêtre terminal -->
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="dot red"></div>
+          <div class="dot yellow"></div>
+          <div class="dot green"></div>
+          <span class="terminal-title">whoami.sh</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line">
+            <span class="t-prompt">$</span>
+            <span class="t-cmd">./whoami --verbose</span>
+          </div>
+          <div class="t-out"><span class="t-key">name</span>      : <span class="t-val">Prénom NOM</span></div>
+          <div class="t-out"><span class="t-key">role</span>      : <span class="t-val">Pentest / Red Team</span></div>
+          <div class="t-out"><span class="t-key">formation</span> : <span class="t-val">Bac+5 Cyber &amp; Réseaux</span></div>
+          <div class="t-out"><span class="t-key">location</span>  : <span class="t-val">Paris, France</span></div>
+          <div class="t-out"><span class="t-key">status</span>    : <span class="t-green">open to work 🟢</span></div>
+          <div class="t-line" style="margin-top: 0.5rem">
+            <span class="t-prompt">$</span>
+            <span class="cursor"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boutons d'action -->
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Me contacter</a>
+        <!-- Le lien href="cv.pdf" pointe vers ton fichier CV dans le dossier -->
+        <a href="cv.pdf" target="_blank" class="btn btn-secondary">Télécharger mon CV</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION COMPÉTENCES
+  ═══════════════════════════════════════ -->
+  <section id="skills">
+    <div class="section-header fade-in">
+      <span class="section-num">01.</span>
+      <h2>Compétences</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-grid">
+
+      <!-- Carte 1 : Offensif -->
+      <div class="skill-card green fade-in">
+        <div class="skill-card-title">🔴 Offensif / Pentest</div>
+        <div class="skill-tags">
+          <span class="tag">Nmap</span>
+          <span class="tag">Metasploit</span>
+          <span class="tag">Burp Suite</span>
+          <span class="tag">SQLmap</span>
+          <span class="tag">Hydra</span>
+          <span class="tag">OWASP Top 10</span>
+        </div>
+      </div>
+
+      <!-- Carte 2 : Cloud -->
+      <div class="skill-card blue fade-in">
+        <div class="skill-card-title">☁️ Cloud &amp; Infra</div>
+        <div class="skill-tags">
+          <span class="tag">AWS</span>
+          <span class="tag">Azure</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Linux</span>
+          <span class="tag">VPN</span>
+          <span class="tag">Firewall</span>
+        </div>
+      </div>
+
+      <!-- Carte 3 : Dev -->
+      <div class="skill-card yellow fade-in">
+        <div class="skill-card-title">💻 Dev &amp; Scripting</div>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Bash</span>
+          <span class="tag">PowerShell</span>
+          <span class="tag">Git</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+
+      <!-- Carte 4 : Réseau -->
+      <div class="skill-card red fade-in">
+        <div class="skill-card-title">🌐 Réseau</div>
+        <div class="skill-tags">
+          <span class="tag">TCP/IP</span>
+          <span class="tag">Wireshark</span>
+          <span class="tag">DNS</span>
+          <span class="tag">HTTP/S</span>
+          <span class="tag">Cisco IOS</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION PROJETS
+  ═══════════════════════════════════════ -->
+  <section id="projects">
+    <div class="section-header fade-in">
+      <span class="section-num">02.</span>
+      <h2>Projets</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Projet 1 -->
+      <div class="project-card fade-in">
+        <div class="project-top">
+          <span class="project-icon">🔍</span>
+          <a href="https://github.com/tonpseudo/nom-du-projet" target="_blank" class="project-link">GitHub →</a>
+        </div>
+        <div class="project-status">
+          <div class="status-dot wip"></div> En cours
+        </div>
+        <h3>Scanner de vulnérabilités réseau</h3>
+        <p>Script Python automatisant la découverte de services et la détection de CVE sur un réseau local.</p>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Nmap</span>
+          <span class="tag">CVE</span>
+        </div>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="project-card fade-in">
+        <div class="project-top">
+          <span class="project-icon">🧪</span>
+          <a href="#" class="project-link">Writeup →</a>
+        </div>
+        <div class="project-status">
+          <div class="status-dot done"></div> Terminé
+        </div>
+        <h3>Lab Active Directory</h3>
+        <p>Environnement AD vulnérable sous Windows Server. Simulation d'attaques : Pass-the-Hash, Kerberoasting.</p>
+        <div class="skill-tags">
+          <span class="tag">Windows</span>
+          <span class="tag">Active Directory</span>
+          <span class="tag">Mimikatz</span>
+        </div>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="project-card fade-in">
+        <div class="project-top">
+          <span class="project-icon">🏴</span>
+          <a href="https://github.com/tonpseudo/ctf-writeups" target="_blank" class="project-link">GitHub →</a>
+        </div>
+        <div class="project-status">
+          <div class="status-dot wip"></div> En cours
+        </div>
+        <h3>CTF Writeups — TryHackMe</h3>
+        <p>Documentation de mes résolutions de challenges CTF avec méthodologie et outils utilisés.</p>
+        <div class="skill-tags">
+          <span class="tag">CTF</span>
+          <span class="tag">TryHackMe</span>
+          <span class="tag">Web</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="legal-note fade-in">
+      ⚠️ Tous les labs sont réalisés sur des environnements isolés et légaux (VMs perso, plateformes CTF)
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION FORMATION
+  ═══════════════════════════════════════ -->
+  <section id="learning">
+    <div class="section-header fade-in">
+      <span class="section-num">03.</span>
+      <h2>Formation &amp; Certifications</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="learning-list">
+
+      <div class="learning-item fade-in">
+        <div class="learning-icon">🎓</div>
+        <div class="learning-info">
+          <h4>Bac+5 Cyber &amp; Réseaux — Nom de l'école</h4>
+          <p>2022 → 2027 · Alternance recherchée</p>
+        </div>
+        <span class="badge badge-wip">En cours</span>
+      </div>
+
+      <div class="learning-item fade-in">
+        <div class="learning-icon">🛡️</div>
+        <div class="learning-info">
+          <h4>TryHackMe — Jr Penetration Tester</h4>
+          <p>Parcours offensif · Web, réseau, privesc</p>
+        </div>
+        <span class="badge badge-wip">En cours</span>
+      </div>
+
+      <div class="learning-item fade-in">
+        <div class="learning-icon">☁️</div>
+        <div class="learning-info">
+          <h4>AWS Cloud Practitioner</h4>
+          <p>Certification cloud fondamentale</p>
+        </div>
+        <span class="badge badge-next">Prévu</span>
+      </div>
+
+      <div class="learning-item fade-in">
+        <div class="learning-icon">🔐</div>
+        <div class="learning-info">
+          <h4>CompTIA Security+</h4>
+          <p>Certification reconnue en entreprise</p>
+        </div>
+        <span class="badge badge-next">Prévu</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION CONTACT
+  ═══════════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-header fade-in">
+      <span class="section-num">04.</span>
+      <h2>Contact</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-text fade-in">
+        <h3>Disponible pour une alternance</h3>
+        <p>
+          Je recherche une alternance de 2 ans à partir de septembre 2025
+          dans le domaine du pentest / red team, idéalement dans une grande
+          structure (banque, télécom, énergie).
+        </p>
+        <div class="contact-links">
+          <!-- Remplace les # par tes vrais liens -->
+          <a href="mailto:ton@email.com" class="contact-link">📧 ton@email.com</a>
+          <a href="https://linkedin.com/in/tonprofil" target="_blank" class="contact-link">💼 LinkedIn</a>
+          <a href="https://github.com/tonpseudo" target="_blank" class="contact-link">🐙 GitHub</a>
+          <a href="https://tryhackme.com/p/tonpseudo" target="_blank" class="contact-link">🏴 TryHackMe</a>
+        </div>
+      </div>
+
+      <div class="availability fade-in">
+        <div class="avail-title">Disponibilité</div>
+        <div class="avail-detail">
+          <p>Type : <strong>Alternance 2 ans</strong></p>
+          <p>Début : <strong>Septembre 2025</strong></p>
+          <p>Rythme : <strong>3j entreprise / 2j école</strong></p>
+          <p>Localisation : <strong>Paris &amp; IDF</strong></p>
+          <hr />
+          <p>Domaines visés :<br /><strong>Pentest Web · Red Team · Cloud Security</strong></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer>
+    <p>Fait avec <span class="accent">{'</span> passion &amp; caffeine <span class="accent">'}</span> · <span class="accent">2025</span></p>
+  </footer>
+
+  <!-- Lien vers ton fichier JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
