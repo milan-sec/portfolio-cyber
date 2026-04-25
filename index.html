@@ -1,50 +1,58 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark" data-lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Milan</title>
-
-  <!-- Lien vers ton fichier CSS -->
+  <title>Milan Obradors | Cybersécurité</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Police Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- ═══════════════════════════════════════
-       BARRE DE NAVIGATION
+       NAVIGATION
   ═══════════════════════════════════════ -->
   <nav>
-    <div class="nav-logo">&gt; milan-sec</div>
+    <div class="nav-logo">&gt; milan_obradors</div>
     <ul class="nav-links">
-      <li><a href="#skills">skills</a></li>
-      <li><a href="#projects">projets</a></li>
-      <li><a href="#learning">formation</a></li>
-      <li><a href="#contact">contact</a></li>
+      <li><a href="#skills"   data-fr="skills"    data-en="skills">skills</a></li>
+      <li><a href="#projects" data-fr="projets"   data-en="projects">projets</a></li>
+      <li><a href="#learning" data-fr="formation" data-en="education">formation</a></li>
+      <li><a href="#contact"  data-fr="contact"   data-en="contact">contact</a></li>
     </ul>
+    <div class="nav-controls">
+      <button class="ctrl-btn" id="lang-toggle" title="Switch language">
+        <span id="lang-label">EN</span>
+      </button>
+      <button class="ctrl-btn" id="theme-toggle" title="Toggle theme">
+        <span id="theme-icon">☀️</span>
+      </button>
+    </div>
   </nav>
 
   <!-- ═══════════════════════════════════════
-       SECTION HERO (page d'accueil)
+       HERO
   ═══════════════════════════════════════ -->
   <section class="hero">
     <div class="hero-content">
 
-      <!-- Petit tag au dessus du titre -->
-      <div class="hero-tag">Étudiant Cybersécurité · Alternance 2026-2029</div>
+      <div class="hero-tag"
+        data-fr="Étudiant Cybersécurité · Alternance 2026-2029"
+        data-en="Cybersecurity Student · Work-study 2026-2029">
+        Étudiant Cybersécurité · Alternance 2026-2029
+      </div>
 
-      <!-- Ton nom -->
       <h1>Milan <span class="accent">Obradors</span></h1>
 
-      <!-- Sous-titre -->
       <p class="hero-sub">
         <span class="role">Pentest · Red Team · Cloud Security</span><br />
-        Étudiant Bac+5 Cyber &amp; Réseaux — en recherche d'alternance
+        <span
+          data-fr="Étudiant Bac+5 Cyber &amp; Réseaux — en recherche d'alternance"
+          data-en="Cybersecurity &amp; Networks Student — looking for a work-study contract">
+          Étudiant Bac+5 Cyber &amp; Réseaux — en recherche d'alternance
+        </span>
       </p>
 
-      <!-- Fausse fenêtre terminal -->
       <div class="terminal">
         <div class="terminal-bar">
           <div class="dot red"></div>
@@ -59,8 +67,9 @@
           </div>
           <div class="t-out"><span class="t-key">name</span>      : <span class="t-val">Milan Obradors</span></div>
           <div class="t-out"><span class="t-key">role</span>      : <span class="t-val">Pentest / Red Team</span></div>
-          <div class="t-out"><span class="t-key">formation</span> : <span class="t-val">Bac+5 Cyber &amp; Réseaux</span></div>
+          <div class="t-out"><span class="t-key">school</span>    : <span class="t-val">IPPSI</span></div>
           <div class="t-out"><span class="t-key">location</span>  : <span class="t-val">Toulouse, France</span></div>
+          <div class="t-out"><span class="t-key">contract</span>  : <span class="t-val" data-fr="1 sem cours / 3 sem entreprise" data-en="1 week school / 3 weeks company">1 sem cours / 3 sem entreprise</span></div>
           <div class="t-out"><span class="t-key">status</span>    : <span class="t-green">open to work 🟢</span></div>
           <div class="t-line" style="margin-top: 0.5rem">
             <span class="t-prompt">$</span>
@@ -69,258 +78,231 @@
         </div>
       </div>
 
-      <!-- Boutons d'action -->
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Me contacter</a>
-        <!-- Le lien href="cv.pdf" pointe vers ton fichier CV dans le dossier -->
-        <a href="cv.pdf" target="_blank" class="btn btn-secondary">Télécharger mon CV</a>
+        <a href="#contact" class="btn btn-primary"
+          data-fr="Me contacter" data-en="Contact me">Me contacter</a>
+        <a href="cv.pdf" target="_blank" class="btn btn-secondary"
+          data-fr="Télécharger mon CV" data-en="Download CV">Télécharger mon CV</a>
       </div>
 
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       SECTION COMPÉTENCES
+       COMPÉTENCES
   ═══════════════════════════════════════ -->
   <section id="skills">
     <div class="section-header fade-in">
       <span class="section-num">01.</span>
-      <h2>Compétences</h2>
+      <h2 data-fr="Compétences" data-en="Skills">Compétences</h2>
       <div class="section-line"></div>
     </div>
-
     <div class="skills-grid">
-
-      <!-- Carte 1 : Offensif -->
       <div class="skill-card green fade-in">
-        <div class="skill-card-title">🔴 Offensif / Pentest</div>
+        <div class="skill-card-title" data-fr="🔴 Offensif / Pentest" data-en="🔴 Offensive / Pentest">🔴 Offensif / Pentest</div>
         <div class="skill-tags">
-          <span class="tag">Nmap</span>
-          <span class="tag">Metasploit</span>
-          <span class="tag">Burp Suite</span>
-          <span class="tag">SQLmap</span>
-          <span class="tag">Hydra</span>
-          <span class="tag">OWASP Top 10</span>
+          <span class="tag">Nmap</span><span class="tag">Metasploit</span>
+          <span class="tag">Burp Suite</span><span class="tag">SQLmap</span>
+          <span class="tag">Hydra</span><span class="tag">OWASP Top 10</span>
         </div>
       </div>
-
-      <!-- Carte 2 : Cloud -->
       <div class="skill-card blue fade-in">
-        <div class="skill-card-title">☁️ Cloud &amp; Infra</div>
+        <div class="skill-card-title" data-fr="☁️ Cloud &amp; Infra" data-en="☁️ Cloud &amp; Infra">☁️ Cloud &amp; Infra</div>
         <div class="skill-tags">
-          <span class="tag">AWS</span>
-          <span class="tag">Azure</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Linux</span>
-          <span class="tag">VPN</span>
-          <span class="tag">Firewall</span>
+          <span class="tag">AWS</span><span class="tag">Azure</span>
+          <span class="tag">Docker</span><span class="tag">Linux</span>
+          <span class="tag">VPN</span><span class="tag">Firewall</span>
         </div>
       </div>
-
-      <!-- Carte 3 : Dev -->
       <div class="skill-card yellow fade-in">
-        <div class="skill-card-title">💻 Dev &amp; Scripting</div>
+        <div class="skill-card-title" data-fr="💻 Dev &amp; Scripting" data-en="💻 Dev &amp; Scripting">💻 Dev &amp; Scripting</div>
         <div class="skill-tags">
-          <span class="tag">Python</span>
-          <span class="tag">Bash</span>
-          <span class="tag">PowerShell</span>
-          <span class="tag">Git</span>
+          <span class="tag">Python</span><span class="tag">Bash</span>
+          <span class="tag">PowerShell</span><span class="tag">Git</span>
           <span class="tag">SQL</span>
         </div>
       </div>
-
-      <!-- Carte 4 : Réseau -->
       <div class="skill-card red fade-in">
-        <div class="skill-card-title">🌐 Réseau</div>
+        <div class="skill-card-title" data-fr="🌐 Réseau" data-en="🌐 Network">🌐 Réseau</div>
         <div class="skill-tags">
-          <span class="tag">TCP/IP</span>
-          <span class="tag">Wireshark</span>
-          <span class="tag">DNS</span>
-          <span class="tag">HTTP/S</span>
+          <span class="tag">TCP/IP</span><span class="tag">Wireshark</span>
+          <span class="tag">DNS</span><span class="tag">HTTP/S</span>
           <span class="tag">Cisco IOS</span>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       SECTION PROJETS
+       PROJETS
   ═══════════════════════════════════════ -->
   <section id="projects">
     <div class="section-header fade-in">
       <span class="section-num">02.</span>
-      <h2>Projets</h2>
+      <h2 data-fr="Projets" data-en="Projects">Projets</h2>
       <div class="section-line"></div>
     </div>
-
     <div class="projects-grid">
 
-      <!-- Projet 1 -->
       <div class="project-card fade-in">
         <div class="project-top">
           <span class="project-icon">🔍</span>
-          <a href="" target="_blank" class="project-link">GitHub →</a>
+          <a href="https://github.com/milan-sec/webvulnscan" target="_blank" class="project-link">GitHub →</a>
         </div>
         <div class="project-status">
-          <div class="status-dot wip"></div> En cours
+          <div class="status-dot done"></div>
+          <span data-fr="Terminé" data-en="Done">Terminé</span>
         </div>
-        <h3>Scanner de vulnérabilités réseau</h3>
-        <p>Script Python automatisant la découverte de services et la détection de CVE sur un réseau local.</p>
+        <h3>WebVulnScan</h3>
+        <p data-fr="Scanner de vulnérabilités web en Python : XSS réfléchi, SQLi, headers manquants, fichiers sensibles. Rapport JSON automatique."
+           data-en="Python web vulnerability scanner: reflected XSS, SQLi, missing headers, exposed files. Auto JSON report.">
+          Scanner de vulnérabilités web en Python : XSS réfléchi, SQLi, headers manquants, fichiers sensibles. Rapport JSON automatique.
+        </p>
         <div class="skill-tags">
-          <span class="tag">Python</span>
-          <span class="tag">Nmap</span>
-          <span class="tag">CVE</span>
+          <span class="tag">Python</span><span class="tag">XSS</span>
+          <span class="tag">SQLi</span><span class="tag">OWASP</span>
         </div>
       </div>
 
-      <!-- Projet 2 -->
       <div class="project-card fade-in">
         <div class="project-top">
           <span class="project-icon">🧪</span>
           <a href="#" class="project-link">Writeup →</a>
         </div>
         <div class="project-status">
-          <div class="status-dot done"></div> Terminé
+          <div class="status-dot wip"></div>
+          <span data-fr="En cours" data-en="In progress">En cours</span>
         </div>
         <h3>Lab Active Directory</h3>
-        <p>Environnement AD vulnérable sous Windows Server. Simulation d'attaques : Pass-the-Hash, Kerberoasting.</p>
+        <p data-fr="Environnement AD vulnérable sous Windows Server. Simulation d'attaques : Pass-the-Hash, Kerberoasting."
+           data-en="Vulnerable AD lab on Windows Server. Attack simulation: Pass-the-Hash, Kerberoasting.">
+          Environnement AD vulnérable sous Windows Server. Simulation d'attaques : Pass-the-Hash, Kerberoasting.
+        </p>
         <div class="skill-tags">
-          <span class="tag">Windows</span>
-          <span class="tag">Active Directory</span>
-          <span class="tag">Mimikatz</span>
+          <span class="tag">Windows</span><span class="tag">Active Directory</span><span class="tag">Mimikatz</span>
         </div>
       </div>
 
-      <!-- Projet 3 -->
       <div class="project-card fade-in">
-  <div class="project-top">
-    <span class="project-icon">🔍</span>
-    <a href="https://github.com/milan-sec/webvulnscan" target="_blank" class="project-link">GitHub →</a>
-  </div>
-  <div class="project-status">
-    <div class="status-dot done"></div> Terminé
-  </div>
-  <h3>WebVulnScan</h3>
-  <p>Scanner de vulnérabilités web en Python : XSS réfléchi, SQLi, headers manquants, fichiers sensibles exposés. Rapport JSON automatique.</p>
-  <div class="skill-tags">
-    <span class="tag">Python</span>
-    <span class="tag">XSS</span>
-    <span class="tag">SQLi</span>
-    <span class="tag">OWASP</span>
-  </div>
-</div>
+        <div class="project-top">
+          <span class="project-icon">🏴</span>
+          <a href="https://github.com/milan-sec" target="_blank" class="project-link">GitHub →</a>
+        </div>
+        <div class="project-status">
+          <div class="status-dot wip"></div>
+          <span data-fr="En cours" data-en="In progress">En cours</span>
+        </div>
+        <h3>CTF Writeups — TryHackMe</h3>
+        <p data-fr="Documentation de mes résolutions de challenges CTF avec méthodologie et outils utilisés."
+           data-en="CTF challenge write-ups with methodology and tools used.">
+          Documentation de mes résolutions de challenges CTF avec méthodologie et outils utilisés.
+        </p>
+        <div class="skill-tags">
+          <span class="tag">CTF</span><span class="tag">TryHackMe</span><span class="tag">Web</span>
+        </div>
+      </div>
 
     </div>
-
-    <p class="legal-note fade-in">
+    <p class="legal-note fade-in"
+      data-fr="⚠️ Tous les labs sont réalisés sur des environnements isolés et légaux (VMs perso, plateformes CTF)"
+      data-en="⚠️ All labs are conducted on isolated, legal environments (personal VMs, CTF platforms)">
       ⚠️ Tous les labs sont réalisés sur des environnements isolés et légaux (VMs perso, plateformes CTF)
     </p>
   </section>
 
   <!-- ═══════════════════════════════════════
-       SECTION FORMATION
+       FORMATION
   ═══════════════════════════════════════ -->
   <section id="learning">
     <div class="section-header fade-in">
       <span class="section-num">03.</span>
-      <h2>Formation &amp; Certifications</h2>
+      <h2 data-fr="Formation &amp; Certifications" data-en="Education &amp; Certifications">Formation &amp; Certifications</h2>
       <div class="section-line"></div>
     </div>
-
     <div class="learning-list">
 
       <div class="learning-item fade-in">
         <div class="learning-icon">🎓</div>
         <div class="learning-info">
-          <h4>Bac+5 Cyber &amp; Réseaux — IPSSI </h4>
-          <p>2024 → 2029 · Alternance recherchée</p>
+          <h4 data-fr="Bac+5 Cyber &amp; Réseaux — IPPSI" data-en="Master's Cyber &amp; Networks — IPPSI">Bac+5 Cyber &amp; Réseaux — IPPSI</h4>
+          <p data-fr="2024 → 2026 · Alternance recherchée" data-en="2024 → 2026 · Seeking work-study contract">2024 → 2026 · Alternance recherchée</p>
         </div>
-        <span class="badge badge-wip">En cours</span>
+        <span class="badge badge-wip" data-fr="En cours" data-en="Ongoing">En cours</span>
       </div>
 
       <div class="learning-item fade-in">
         <div class="learning-icon">🛡️</div>
         <div class="learning-info">
           <h4>TryHackMe — Jr Penetration Tester</h4>
-          <p>Parcours offensif · Web, réseau, privesc</p>
+          <p data-fr="Parcours offensif · Web, réseau, privesc" data-en="Offensive path · Web, network, privesc">Parcours offensif · Web, réseau, privesc</p>
         </div>
-        <span class="badge badge-wip">En cours</span>
+        <span class="badge badge-wip" data-fr="En cours" data-en="Ongoing">En cours</span>
       </div>
 
       <div class="learning-item fade-in">
         <div class="learning-icon">☁️</div>
         <div class="learning-info">
           <h4>AWS Cloud Practitioner</h4>
-          <p>Certification cloud fondamentale</p>
+          <p data-fr="Certification cloud fondamentale" data-en="Foundational cloud certification">Certification cloud fondamentale</p>
         </div>
-        <span class="badge badge-next">Prévu</span>
+        <span class="badge badge-next" data-fr="Prévu" data-en="Planned">Prévu</span>
       </div>
 
       <div class="learning-item fade-in">
         <div class="learning-icon">🔐</div>
         <div class="learning-info">
           <h4>CompTIA Security+</h4>
-          <p>Certification reconnue en entreprise</p>
+          <p data-fr="Certification reconnue en entreprise" data-en="Industry-recognized security cert">Certification reconnue en entreprise</p>
         </div>
-        <span class="badge badge-next">Prévu</span>
+        <span class="badge badge-next" data-fr="Prévu" data-en="Planned">Prévu</span>
       </div>
 
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════
-       SECTION CONTACT
+       CONTACT
   ═══════════════════════════════════════ -->
   <section id="contact">
     <div class="section-header fade-in">
       <span class="section-num">04.</span>
-      <h2>Contact</h2>
+      <h2 data-fr="Contact" data-en="Contact">Contact</h2>
       <div class="section-line"></div>
     </div>
-
     <div class="contact-grid">
 
       <div class="contact-text fade-in">
-        <h3>Disponible pour une alternance</h3>
-        <p>
-          Je recherche une alternance de 1 à 3 ans à partir de septembre 2026
-          dans le domaine du pentest / red team, idéalement dans une grande
-          structure (banque, télécom, énergie).
+        <h3 data-fr="Disponible pour une alternance" data-en="Available for a work-study contract">Disponible pour une alternance</h3>
+        <p data-fr="Je recherche une alternance d'1 à 3 ans à partir de 2026, dans le domaine du pentest / red team, idéalement dans une grande structure (banque, télécom, énergie) à Toulouse ou en remote."
+           data-en="Looking for a 1 to 3-year work-study contract starting in 2026, in pentest / red team, ideally at a large organization (bank, telecom, energy) in Toulouse or remote.">
+          Je recherche une alternance d'1 à 3 ans à partir de 2026, dans le domaine du pentest / red team, idéalement dans une grande structure (banque, télécom, énergie) à Toulouse ou en remote.
         </p>
         <div class="contact-links">
-          <!-- Remplace les # par tes vrais liens -->
-          <a href="mailto:obrsmilan@gmail.com" class="contact-link">📧 obrsmilan@gmail.com</a>
-          <a href="https://www.linkedin.com/in/milan-obradors" target="_blank" class="contact-link">💼 LinkedIn</a>
+          <a href="https://www.linkedin.com/in/milan-obradors-552194269" target="_blank" class="contact-link">💼 LinkedIn</a>
           <a href="https://github.com/milan-sec" target="_blank" class="contact-link">🐙 GitHub</a>
-          <a href="https://tryhackme.com/p/" target="_blank" class="contact-link">🏴 TryHackMe</a>
         </div>
       </div>
 
       <div class="availability fade-in">
-        <div class="avail-title">Disponibilité</div>
+        <div class="avail-title" data-fr="Disponibilité" data-en="Availability">Disponibilité</div>
         <div class="avail-detail">
-          <p>Type : <strong>Alternance 1/3 ans</strong></p>
-          <p>Début : <strong>Septembre 2026</strong></p>
-          <p>Rythme : <strong></strong></p>
-          <p>Localisation : <strong>Toulouse &amp; </strong></p>
+          <p><span data-fr="Type" data-en="Type">Type</span> : <strong data-fr="Alternance 1 à 3 ans" data-en="Work-study 1 to 3 years">Alternance 1 à 3 ans</strong></p>
+          <p><span data-fr="Début" data-en="Start">Début</span> : <strong>2026</strong></p>
+          <p><span data-fr="Fin possible" data-en="End">Fin possible</span> : <strong>2029</strong></p>
+          <p><span data-fr="Rythme" data-en="Schedule">Rythme</span> : <strong data-fr="1 sem cours / 3 sem entreprise" data-en="1 week school / 3 weeks company">1 sem cours / 3 sem entreprise</strong></p>
+          <p><span data-fr="Localisation" data-en="Location">Localisation</span> : <strong>Toulouse &amp; remote</strong></p>
           <hr />
-          <p>Domaines visés :<br /><strong>Pentest Web · Red Team · Cloud Security</strong></p>
+          <p><span data-fr="Domaines visés" data-en="Target fields">Domaines visés</span> :<br /><strong>Pentest · Red Team · Cloud Security</strong></p>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════ -->
   <footer>
-    <p>Fait avec <span class="accent">{'</span> passion &amp; caffeine <span class="accent">'}</span> · <span class="accent">2025</span></p>
+    <p>Milan Obradors · <span class="accent">milan-sec</span> · 2026</p>
   </footer>
 
-  <!-- Lien vers ton fichier JavaScript -->
   <script src="script.js"></script>
-
 </body>
 </html>
